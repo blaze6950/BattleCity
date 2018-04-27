@@ -1,6 +1,4 @@
 #pragma once
-#include "Header.h"
-//class storing coordinates
 class Point
 {
 protected:
@@ -16,6 +14,5 @@ public:
 	void setY(int y);
 	Point getAbsolutCoor();
 	Point getRelativeCoor();
-	Direction getDirectionToPoint(Point* point);
 };
 
