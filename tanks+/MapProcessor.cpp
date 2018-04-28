@@ -12,52 +12,42 @@ MapProcessor::~MapProcessor()
 }
 
 void MapProcessor::paint()
-{
-	for each (vector<Block> yLine in _map)
+{	
+	for each (Block block in _map)
 	{
-		for each (Block block in yLine)
-		{
-			block.paint();
-		}
-		cout << endl;
-	}	
-	cout << endl;
+		block.paint();
+	}
 }
 
-vector<vector<Block>> MapProcessor::getMap()
+vector<Block> MapProcessor::getMap()
 {
 	return _map;
 }
 
-void MapProcessor::setMap(vector<vector<Block>> map)
+void MapProcessor::setMap(vector<Block> map)
 {
 	_map = map;
 }
 
 Block* MapProcessor::getBlock(int x, int y)
 {
-	if (y <= _map.size() - 1)
+	Point* point;
+	for each (Block block in _map)
 	{
-		if (x <= _map[y].size() - 1)
+		point = &block._point.getRelativeCoor();
+		if (point->getX() == x && point->getY() == y)
 		{
-			return &(_map[y][x]);
+			return &block;
 		}
 	}
 	return nullptr;
 }
 
-Block * MapProcessor::getBlock(Point point)
+Block* MapProcessor::getBlock(Point point)
 {
 	int x = point.getX();
 	int y = point.getY();
-	if (y <= _map.size() - 1)
-	{
-		if (x <= _map[y].size() - 1)
-		{
-			return &(_map[y][x]);
-		}
-	}
-	return nullptr;
+	return getBlock(x, y);
 }
 
 bool MapProcessor::canMove(Point point, Direction dir)
@@ -81,8 +71,7 @@ bool MapProcessor::canMove(Point point, Direction dir)
 	default:
 		break;
 	}
-	Point newRelativePoint = newPoint.getRelativeCoor();
-	Block nextBlock = _map[newRelativePoint.getY()][newRelativePoint.getX()];
+	Block* nextBlock = getBlock(newPoint.getX(), newPoint.getY());
 	if (typeid(block) == typeid(Block))// код для проверки движения для танков
 	{
 		if (typeid(nextBlock) == typeid(Block))// условие, проверяющее, является ли nextBlock emptyBlock'om
