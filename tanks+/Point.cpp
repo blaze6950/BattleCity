@@ -48,3 +48,26 @@ Point Point::getRelativeCoor()
 	int newY = (_y + 1) / 3;
 	return Point(newX, newY);
 }
+
+Direction Point::getDirectionToPoint(Point* point)
+{
+	if (this->getX() > point->getX())
+	{
+		return Direction(Left);
+	}
+	else if (this->getX() < point->getX())
+	{
+		return Direction(Right);
+	}
+	else {
+		if (this->getY() > point->getY())
+		{
+			return Direction(Up);
+		}
+		else if (this->getY() < point->getY())
+		{
+			return Direction(Down);
+		}
+	}
+	return Direction();//if the values of Ox and Oy are equal, it returns null or nothing
+}
