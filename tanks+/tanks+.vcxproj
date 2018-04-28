@@ -112,6 +112,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="MapProcessor.h" />
     <ClInclude Include="MovableBlock.h" />
@@ -119,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MapProcessor.cpp" />
     <ClCompile Include="MovableBlock.cpp" />

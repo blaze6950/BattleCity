@@ -43,18 +43,19 @@ Block* MapProcessor::getBlock(int x, int y)
 	return nullptr;
 }
 
-Block* MapProcessor::getBlock(Point point)
+Block* MapProcessor::getBlock(Point* point)
 {
-	int x = point.getX();
-	int y = point.getY();
+	int x = point->getX();
+	int y = point->getY();
 	return getBlock(x, y);
 }
 
-bool MapProcessor::canMove(Point point, Direction dir)
+Block* MapProcessor::getNextBlock(Point* point, Direction direction)
 {
-	Block block = *(this->getBlock(point));
-	Point newPoint = block._point;
-	switch (dir)
+	Point newPoint;
+	newPoint.setX(point->getX());
+	newPoint.setY(point->getY());
+	switch (direction)
 	{
 	case Up:
 		newPoint.setY(newPoint.getY() - 2);
@@ -72,6 +73,13 @@ bool MapProcessor::canMove(Point point, Direction dir)
 		break;
 	}
 	Block* nextBlock = getBlock(newPoint.getX(), newPoint.getY());
+	return nextBlock;
+}
+
+bool MapProcessor::canMove(Point* point, Direction direction)
+{
+	Block* nextBlock = this->getNextBlock(point, direction);
+	Block block = *(this->getBlock(point));
 	if (typeid(block) == typeid(Block))// код для проверки движения для танков
 	{
 		if (typeid(nextBlock) == typeid(Block))// условие, проверяющее, является ли nextBlock emptyBlock'om
