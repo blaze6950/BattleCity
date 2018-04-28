@@ -8,3 +8,7 @@ Bullet::Bullet(Point* point, Direction direction, MapProcessor map, int speed) :
 Bullet::~Bullet()
 {
 }
+
+void Bullet::doTheActionWhenABulletHits()
+{
+}
