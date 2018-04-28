@@ -1,10 +1,8 @@
 #include "Bullet.h"
 
 
-Bullet::Bullet(Point* point, Direction direction)
+Bullet::Bullet(Point* point, Direction direction, MapProcessor map, int speed) : MovableBlock(point->getX(), point->getY(), map, speed)
 {
-	this->_point.setX(point->getX());
-	this->_point.setY(point->getY());
 }
 
 Bullet::~Bullet()

@@ -1,18 +1,18 @@
 #pragma once
 #include "Block.h"
 #include "Header.h"
-#include "MapProcessor.h"
 
 class MovableBlock :
 	public Block
 {
 protected:
 	Direction _direction;
-	MapProcessor* _mapProc;
+	int _speed;
 public:
-	MovableBlock(int x, int y, MapProcessor& _map);
+	MovableBlock(int x, int y, MapProcessor& _map, int speed);
 	~MovableBlock();
 	void setDir(Direction dir);
 	void Move();
+
 };
 

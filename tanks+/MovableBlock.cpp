@@ -2,10 +2,10 @@
 
 
 
-MovableBlock::MovableBlock(int x, int y, MapProcessor& _map) : Block(x, y)
+MovableBlock::MovableBlock(int x, int y, MapProcessor& _map, int speed) : Block(x, y, _map)
 {	
 	_direction = Up;
-	_mapProc = &_map;
+	_speed = speed;
 }
 
 
@@ -21,7 +21,7 @@ void MovableBlock::setDir(Direction dir)
 
 void MovableBlock::Move()
 {
-	if (_mapProc->canMove(this->_point, _direction))
+	if (_mapProcessor->canMove(&this->_point, _direction))
 	{
 		this->_needRefresh = true;
 	}	

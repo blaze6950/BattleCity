@@ -2,11 +2,12 @@
 
 
 
-Block::Block(int x, int y)
+Block::Block(int x, int y, MapProcessor& _map)
 {
-	_point.setX(x);
-	_point.setY(y);
-	_needRefresh = true;
+	this->_mapProcessor = &_map;
+	this->_point.setX(x);
+	this->_point.setY(y);
+	this->_needRefresh = true;
 }
 
 
@@ -21,4 +22,8 @@ void Block::paint()
 		_needRefresh = false;
 		// paint instructions
 	}	
+}
+
+void Block::doTheActionWhenABulletHits()
+{
 }
