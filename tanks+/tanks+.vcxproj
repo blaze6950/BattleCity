@@ -119,6 +119,7 @@
     <ClInclude Include="MapProcessor.h" />
     <ClInclude Include="MovableBlock.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Tank.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
@@ -129,6 +130,7 @@
     <ClCompile Include="MapProcessor.cpp" />
     <ClCompile Include="MovableBlock.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Tank.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

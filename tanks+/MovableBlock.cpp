@@ -19,6 +19,21 @@ void MovableBlock::setDir(Direction dir)
 	this->_needRefresh = true;
 }
 
+Direction MovableBlock::getDir()
+{
+	return _direction;
+}
+
+void MovableBlock::setSpeed(int speed)
+{
+	this->_speed = speed;
+}
+
+int MovableBlock::getSpeed()
+{
+	return _speed;
+}
+
 void MovableBlock::Move()
 {
 	if (_mapProcessor->canMove(&this->_point, _direction))

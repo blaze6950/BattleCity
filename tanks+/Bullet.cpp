@@ -1,7 +1,7 @@
 #include "Bullet.h"
 
 
-Bullet::Bullet(Point* point, Direction direction, MapProcessor map, int speed) : MovableBlock(point->getX(), point->getY(), map, speed)
+Bullet::Bullet(Point* point, Direction direction, MapProcessor* map, int speed) : MovableBlock(point->getX(), point->getY(), map, speed)
 {
 }
 
@@ -22,8 +22,9 @@ void Bullet::paint()
 		{
 			PaintLowerBlock();
 		}
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), White);
 		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), _point.getCoordFromThisPoint());
-		cout << char(15);
+		cout << char(253);
 	}
 }
 
