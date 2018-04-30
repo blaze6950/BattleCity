@@ -28,7 +28,7 @@ void Block::doTheActionWhenABulletHits()
 {
 }
 
-void Block::setNeedRefrsh(bool value)
+void Block::setNeedRefresh(bool value)
 {
 	_needRefresh = value;
 }

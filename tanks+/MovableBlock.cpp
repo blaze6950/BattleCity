@@ -55,6 +55,6 @@ void MovableBlock::paint()
 
 void MovableBlock::PaintLowerBlock()
 {
-	_lowerBlock->setNeedRefrsh(true);
+	_lowerBlock->setNeedRefresh(true);
 	_lowerBlock->paint();
 }
