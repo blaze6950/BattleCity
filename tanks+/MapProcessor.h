@@ -2,6 +2,8 @@
 #include "Block.h"
 #include "vector"
 #include "Header.h"
+#include "Emptyblock.h"
+#include "Bullet.h"
 
 using namespace std;
 

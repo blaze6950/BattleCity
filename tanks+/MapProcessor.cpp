@@ -80,19 +80,23 @@ bool MapProcessor::canMove(Point* point, Direction direction)
 {
 	Block* nextBlock = this->getNextBlock(point, direction);
 	Block block = *(this->getBlock(point));
+	if (typeid(nextBlock) == typeid(Emptyblock))
+	{
+		return true;
+	}
 	if (typeid(block) == typeid(Block))// код для проверки движения для танков
 	{
-		if (typeid(nextBlock) == typeid(Block))// условие, проверяющее, является ли nextBlock emptyBlock'om
-		{
-			return true;
-		}
+		//if (typeid(nextBlock) == typeid(Block))// условие, проверяющее, является ли nextBlock emptyBlock'om
+		//{
+		//	return true;
+		//}
 	}
-	else if (typeid(block) == typeid(Block))// код для проверки движения для пуль
+	else if (typeid(block) == typeid(Bullet))// код для проверки движения для пуль
 	{
-		if (typeid(nextBlock) == typeid(Block) || typeid(nextBlock) == typeid(Block))// условие, проверяющее, является ли nextBlock emptyBlock'om или деревьями
-		{
-			return true;
-		}
+		//if (typeid(nextBlock) == typeid(Block) || typeid(nextBlock) == typeid(Block))// условие, проверяющее, является ли nextBlock emptyBlock'om или деревьями
+		//{
+		//	return true;
+		//}
 	}
 	return false;
 }
