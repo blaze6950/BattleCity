@@ -27,3 +27,8 @@ void Block::paint()
 void Block::doTheActionWhenABulletHits()
 {
 }
+
+void Block::setNeedRefrsh(bool value)
+{
+	_needRefresh = value;
+}

@@ -17,5 +17,6 @@ public:
 	Point getAbsolutCoor();
 	Point getRelativeCoor();
 	Direction getDirectionToPoint(Point* point);
+	COORD getCoordFromThisPoint();
 };
 

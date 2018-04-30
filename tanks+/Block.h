@@ -14,5 +14,6 @@ public:
 	~Block();
 	virtual void paint();	
 	virtual void doTheActionWhenABulletHits();
+	void setNeedRefrsh(bool value);
 };
 

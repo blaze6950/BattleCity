@@ -71,3 +71,11 @@ Direction Point::getDirectionToPoint(Point* point)
 	}
 	return Direction();//if the values of Ox and Oy are equal, it returns null or nothing
 }
+
+COORD Point::getCoordFromThisPoint()
+{
+	COORD coord;
+	coord.X = _x;
+	coord.Y = _y;
+	return coord;
+}
