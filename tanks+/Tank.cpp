@@ -116,6 +116,6 @@ void Tank::Fire()
 	if (_bullet == nullptr)
 	{
 		_bullet = new Bullet(&_point, _direction, _mapProcessor, _speed + 10);
-		_mapProcessor.
+		//_mapProcessor.
 	}
 }
