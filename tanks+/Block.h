@@ -3,8 +3,7 @@
 #include "Point.h"
 #include "MapProcessor.h"
 
-class Block
-{
+class Block{
 protected:
 	bool _needRefresh;	
 	MapProcessor* _mapProcessor;

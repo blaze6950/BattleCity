@@ -1,4 +1,9 @@
 #pragma once
+#include <Windows.h>
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <conio.h>
 #include <windows.h>
 
 enum Direction

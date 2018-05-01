@@ -117,6 +117,7 @@
     <ClInclude Include="Frame.h" />
     <ClInclude Include="GameProcessor.h" />
     <ClInclude Include="Header.h" />
+    <ClInclude Include="MapLoader.h" />
     <ClInclude Include="MapProcessor.h" />
     <ClInclude Include="MovableBlock.h" />
     <ClInclude Include="Point.h" />
@@ -129,6 +130,7 @@
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="GameProcessor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MapLoader.cpp" />
     <ClCompile Include="MapProcessor.cpp" />
     <ClCompile Include="MovableBlock.cpp" />
     <ClCompile Include="Point.cpp" />

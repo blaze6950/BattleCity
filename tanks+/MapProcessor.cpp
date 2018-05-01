@@ -34,13 +34,13 @@ Block* MapProcessor::getBlock(int x, int y)
 	Point* point;
 	for each (Block block in _map)
 	{
-		point = &block._point.getRelativeCoor();
-		if (point->getX() == x && point->getY() == y)
+		point = &block._point.getAbsolutCoor();
+		if (point->getX() + 1 >= x && point->getX() - 1 <= x && point->getY() + 1 >= y && point->getY() - 1 <= y)
 		{
 			return &block;
 		}
 	}
-	return nullptr;
+	return &Emptyblock(x, y, *this);
 }
 
 Block* MapProcessor::getBlock(Point* point)

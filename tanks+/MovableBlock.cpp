@@ -60,16 +60,6 @@ void MovableBlock::paint()
 	if (_needRefresh)
 	{
 		_needRefresh = false;
-		if (_lowerBlock != nullptr)
-		{
-			PaintLowerBlock();
-		}
 		// paint instructions
 	}
-}
-
-void MovableBlock::PaintLowerBlock()
-{
-	_lowerBlock->setNeedRefresh(true);
-	_lowerBlock->paint();
 }
