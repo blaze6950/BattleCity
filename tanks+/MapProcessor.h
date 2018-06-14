@@ -1,10 +1,9 @@
 #pragma once
-#include "Block.h"
 #include "Header.h"
-#include "Emptyblock.h"
-#include "Bullet.h"
 
 using namespace std;
+
+class Block;
 
 class MapProcessor
 {
@@ -14,7 +13,7 @@ public:
 	MapProcessor();
 	~MapProcessor();
 	void paint();
-	vector<Block> getMap();
+	vector<Block>& getMap();
 	void setMap(vector<Block> map);
 	Block* getBlock(int x, int y);
 	Block* getBlock(Point* point);

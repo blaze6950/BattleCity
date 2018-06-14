@@ -1,4 +1,4 @@
-#include "MapProcessor.h"
+#include "Header.h"
 
 
 
@@ -19,7 +19,7 @@ void MapProcessor::paint()
 	}
 }
 
-vector<Block> MapProcessor::getMap()
+vector<Block>& MapProcessor::getMap()
 {
 	return _map;
 }

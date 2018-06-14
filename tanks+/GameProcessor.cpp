@@ -1,4 +1,4 @@
-#include "GameProcessor.h"
+#include "Header.h"
 
 
 
@@ -26,10 +26,11 @@ void GameProcessor::MakeOneCycle()
 		t1.MoveBullet();
 		t2.MoveBullet();*/
 
-		int size = (_mapProcessor->getMap).size();
+		vector<Block> *map = &(_mapProcessor->getMap());
+		int size = map->size();
 		for (int i = 0; i < size; i++)
 		{
-			(_mapProcessor->getMap)[i].paint();
+			(_mapProcessor->getMap())[i].paint();
 		}
 
 		Sleep(200 - _speed);
@@ -48,5 +49,5 @@ void GameProcessor::LoadMap()
 {
 	MapLoader* mapLoader = new MapLoader();
 	mapLoader->LoadFile();
-	_mapProcessor->setMap(mapLoader->)
+	//_mapProcessor->setMap(mapLoader->)
 }

@@ -1,6 +1,4 @@
-#include "MapLoader.h"
-
-
+#include "Header.h"
 
 MapLoader::MapLoader()
 {
@@ -14,11 +12,11 @@ MapLoader::~MapLoader()
 void MapLoader::LoadFile()
 {
 	char buf[40];
-	area.resize(13);
+	_map.resize(13);
 	ifstream stage_null("stage1.txt");
 	bool is_open = stage_null.is_open();
 	int y = 0;
-	for (auto it = area.begin(); it != area.end(); it++)
+	for (auto it = _map.begin(); it != _map.end(); it++)
 	{
 		stage_null.getline(buf, 40);
 		if (buf[0] == 32)
@@ -32,7 +30,7 @@ void MapLoader::LoadFile()
 		{
 			if (buf[i] != 32)
 			{
-				it->push_back(decipher(buf[i], i, y));
+				//it->push_back(decipher(buf[i], i, y));
 			}
 		}
 		y++;

@@ -1,5 +1,6 @@
 #pragma once
-#include "MovableBlock.h"
+#include "Header.h"
+
 class Tank :
 	public MovableBlock
 {

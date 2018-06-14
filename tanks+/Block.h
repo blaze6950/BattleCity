@@ -1,12 +1,12 @@
 #pragma once
-#include <iostream>
-#include "Point.h"
-#include "MapProcessor.h"
+#include "Header.h"
+
+class MapProcessor;
 
 class Block{
 protected:
 	bool _needRefresh;	
-	MapProcessor* _mapProcessor;
+	MapProcessor *_mapProcessor;
 public:
 	Point _point;
 	Block(int x, int y, MapProcessor& _map);

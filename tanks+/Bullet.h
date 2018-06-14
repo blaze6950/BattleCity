@@ -1,5 +1,6 @@
 #pragma once
-#include "MovableBlock.h"
+#include "Header.h"
+
 class Bullet : public MovableBlock
 {
 public:

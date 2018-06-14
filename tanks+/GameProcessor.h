@@ -1,8 +1,5 @@
 #pragma once
-#include "MapProcessor.h"
-#include "Tank.h"
-#include "Bullet.h"
-#include "MapLoader.h"
+#include "Header.h"
 
 class GameProcessor
 {

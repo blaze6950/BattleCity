@@ -1,10 +1,11 @@
-#include <iostream>
+#include "Header.h"
+
 using namespace std;
 
 void main()
 {
-	int first, second;
-	cin >> first >> second;
-	cout << first << " / " << second << " = " << first / second << endl;
+	MapProcessor* map = new MapProcessor();
+	Block* newBlock = new Block(10, 20, *map);
+	newBlock->doTheActionWhenABulletHits();
 	system("pause");
 }

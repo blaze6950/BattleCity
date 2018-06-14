@@ -1,6 +1,15 @@
 #pragma once
-#include "Header.h"
+//#include "Header.h"
 //class storing coordinates
+
+enum Direction
+{
+	Up,
+	Right,
+	Down,
+	Left
+};
+
 class Point
 {
 protected:

@@ -1,18 +1,18 @@
 #pragma once
+//#include "stdafx.h"
 #include <Windows.h>
 #include <iostream>
 #include <vector>
 #include <fstream>
 #include <conio.h>
 #include <windows.h>
-
-enum Direction
-{
-	Up,
-	Right,
-	Down,
-	Left
-};
+#include "Point.h"
+#include "Block.h"
+#include "Emptyblock.h"
+#include "MapProcessor.h"
+#include "MovableBlock.h"
+#include "Bullet.h"
+#include "Frame.h"
 
 enum Colors // для установки цвета танка
 {
@@ -33,3 +33,8 @@ enum Colors // для установки цвета танка
 	Grey = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_GREEN,
 	White = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY,
 };
+
+#include "Tank.h"
+#include "MapProcessor.h"
+#include "GameProcessor.h"
+#include "MapLoader.h"
